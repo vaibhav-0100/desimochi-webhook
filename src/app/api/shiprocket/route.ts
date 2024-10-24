@@ -10,7 +10,7 @@ export async function POST(request: NextRequest) {
 
     const requestBody = await request.json();
     console.log('Request Body:', requestBody);
-    const response= await axios.post("http://192.168.0.2:8002/store/update-order-status/", requestBody, {
+    const response= await axios.post("https://backend.desimochi.com/store/update-order-status/", requestBody, {
         headers:{
         'Content-Type': customHeaders['content-type'],
         'Authorization': customHeaders['authorization'],
